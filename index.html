@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>App Luyện Phát Âm Tiếng Trung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Luyện Phát Âm Pinyin (HSK 1)</h1>
+        
+        <!-- Khẩu hình & Bài học -->
+        <div id="lesson-card" class="mb-6 p-4 border-l-4 border-blue-500 bg-blue-50">
+            <h2 class="text-xl font-semibold" id="target-pinyin">Âm tiết: Mā</h2>
+            <p id="instruction" class="text-gray-600">Khẩu hình: Mở rộng miệng, phát âm thanh cao và phẳng.</p>
+        </div>
 
+        <!-- Điều khiển -->
+        <div class="flex gap-4">
+            <button id="btn-record" class="bg-red-500 text-white px-6 py-2 rounded-full">Thu âm & Chấm điểm</button>
+            <button id="btn-play" class="bg-green-500 text-white px-6 py-2 rounded-full">Nghe mẫu</button>
+        </div>
+
+        <!-- Biểu đồ -->
+        <canvas id="pitchChart" class="mt-8 h-40"></canvas>
+        <div id="result" class="mt-4 font-bold text-lg"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
